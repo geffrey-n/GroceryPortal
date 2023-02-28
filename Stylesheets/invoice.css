@@ -1,0 +1,99 @@
+/* Style for the entire body of the web page */
+body {
+  margin: 0;
+}
+
+/* Hiding the invoice page */
+.page-invoice {
+  display: none;
+}
+
+/* Style for the top portion of product page */
+.invoice-top {
+  position: fixed;
+  top: 0vw;
+  background-color: white;
+  height: 5.5vw;
+  width: 100vw;
+  border-radius: 0vw 0vw 5vw 5vw;
+  box-shadow: 1px 1px 10px 1px gray;
+  display: grid;
+  grid-template-columns: 30vw 57vw 10vw;
+}
+
+/* Style for the logo and name of the webpage */
+.page-invoice .app-logo-name {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 6vw 25vw;
+  grid-template-rows: 5vw;
+  margin-left: 3vw;
+}
+
+/* Size of the webpage logo */
+.page-invoice .app-logo {
+  margin-top: 0.5vw;
+  height: 4vw;
+  width: 4vw;
+}
+
+/* Size and style of the webpage name */
+.page-invoice .app-name {
+  font-style: italic;
+  font-weight: bolder;
+  grid-area: 1/2/2/3;
+}
+.page-invoice .app-name-firstword-firstletter {
+  font-size: 3vw;
+  color: #02a437;
+}
+.page-invoice .app-name-firstword-nextletters {
+  font-size: 1.5vw;
+  color: #02a437;
+}
+.page-invoice .app-name-secondword-firstletter {
+  font-size: 3vw;
+  color: #a5490a;
+}
+.page-invoice .app-name-secondword-nextletters {
+  font-size: 1.5vw;
+  color: #a5490a;
+}
+
+/* Style for the bottom portion of the product page */
+.invoice-bottom {
+  background-color: rgb(255, 238, 221);
+  height: max-content;
+  width: 85vw;
+  border: 25px solid white;
+  border-radius: 8vw;
+  box-shadow: 1px 1px 20px 5px gray;
+  margin-left: 4.5vw;
+  margin-top: 7.5vw;
+}
+
+/* Style for invoice for purchased product */
+.product-invoice {
+  margin-top: 2vw;
+  text-align: center;
+}
+
+/* Style for back option */
+.options-back {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin: 1.5vw 5vw 1.5vw 5vw;
+}
+
+/* Style for the back to cart and back to category options */
+.cart-back,
+.category-back {
+  font-size: 1.5vw;
+  background-color: #a5490a;
+  color: white;
+  border-radius: 2vw;
+  padding: 0vw 0.5vw 0vw 0.5vw;
+  cursor: pointer;
+}

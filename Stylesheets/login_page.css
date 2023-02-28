@@ -1,0 +1,144 @@
+/* Importing the css files for sign up, categories, product and cart pages */
+@import url("../Stylesheets/signup_page.css");
+@import url("../Stylesheets/categories_page.css");
+@import url("../Stylesheets/list_page.css");
+@import url("../Stylesheets/cart_page.css");
+@import url("../Stylesheets/invoice.css");
+
+/* Background for the entire webpage with default font*/
+body {
+  background-image: url("../Assets/Images/bgimage.png");
+  background-repeat: repeat;
+  background-size: contain;
+  height: 10vw;
+  width: 10vw;
+  font-family: "Poppins";
+  color: #a5490a;
+}
+
+/* Style for the login page */
+.login_page {
+  display: flex;
+  background-color: rgb(255, 238, 221);
+  height: 36vw;
+  width: 70vw;
+  border: 25px solid white;
+  border-radius: 8vw;
+  box-shadow: 1px 1px 20px 5px gray;
+  margin-left: 11.5vw;
+  margin-top: 12vh;
+}
+
+/* Style for the webpage logo and name */
+.app-logo-name {
+  display: grid;
+  grid-template-columns: 10vw 25vw;
+  grid-template-rows: 10vw 22vw;
+  margin-top: 2vw;
+  margin-left: 2.5vw;
+  margin-right: 0.5vw;
+}
+
+/* Size of the webpage logo */
+.app-logo {
+  height: 8vw;
+  width: 8vw;
+  margin-left: 2.1vw;
+}
+
+/* Size and style of the webpage name */
+.app-name {
+  font-style: italic;
+  font-weight: bolder;
+  grid-area: 1/2/2/3;
+  margin-top: 1.1vw;
+}
+.app-name-firstword-firstletter {
+  font-size: 6vw;
+  color: #02a437;
+}
+.app-name-firstword-nextletters {
+  font-size: 3vw;
+  color: #02a437;
+}
+.app-name-secondword-firstletter {
+  font-size: 6vw;
+  color: #a5490a;
+}
+.app-name-secondword-nextletters {
+  font-size: 3vw;
+  color: #a5490a;
+}
+
+/* Style for the login tab */
+.login-tab {
+  grid-area: 2/1/3/3;
+  display: grid;
+  grid-template-rows: 4vw 4.5vw 4.5vw repeat(2, 4vw);
+  grid-column-gap: 1vw;
+  grid-template-columns: 100%;
+  background-color: #ffd6ad;
+  border-radius: 4vw;
+  text-align: center;
+  padding: 1vw;
+}
+
+/* Style for Login name */
+.login-name {
+  font-weight: bolder;
+  font-size: 2vw;
+}
+
+/* Size of the user mail id */
+.user-mail {
+  font-size: 1.75vw;
+  border-style: none;
+  border-radius: 1vw;
+  padding: 0.7vw;
+  outline-style: none;
+}
+
+/* Size of the user password */
+.user-password {
+  font-size: 1.75vw;
+  border-style: none;
+  border-radius: 1vw;
+  padding: 0.7vw;
+  outline-style: none;
+}
+
+/* Style for login buttom */
+.login-button {
+  font-size: 1.75vw;
+  background-color: #a5490a;
+  border-style: none;
+  border-radius: 1vw;
+  color: white;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  cursor: pointer;
+}
+
+/* Style for new user sign up */
+.new-user {
+  font-size: 1.5vw;
+  font-weight: 300;
+}
+.sign-up {
+  font-size: 1.5vw;
+  font-weight: bolder;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Style for the animation */
+.page_animation {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 8vw;
+  margin-top: 5vw;
+}
+
+/* Hiding the scrollbar for entire page */
+::-webkit-scrollbar {
+  display: none;
+}

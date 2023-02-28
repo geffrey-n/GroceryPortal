@@ -1,0 +1,235 @@
+/* Hiding the cart page */
+.page-cart {
+  display: none;
+}
+
+/* Style for the entire body of the web page */
+body {
+  margin: 0;
+  font-size: 2vw;
+}
+
+/* Style for the top portion of cart page */
+.cart-top {
+  position: fixed;
+  top: 0vw;
+  background-color: white;
+  height: 5.5vw;
+  width: 100vw;
+  border-radius: 0vw 0vw 5vw 5vw;
+  box-shadow: 1px 1px 10px 1px gray;
+  display: grid;
+  grid-template-columns: 30vw 57vw 10vw;
+}
+
+/* Style for the logo and name of the webpage */
+.page-cart .app-logo-name {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 6vw 25vw;
+  grid-template-rows: 5vw;
+  margin-left: 3vw;
+}
+
+/* Size of the webpage logo */
+.page-cart .app-logo {
+  margin-top: 0.5vw;
+  height: 4vw;
+  width: 4vw;
+}
+
+/* Size and style of the webpage name */
+.page-cart .app-name {
+  font-style: italic;
+  font-weight: bolder;
+  grid-area: 1/2/2/3;
+}
+.page-cart .app-name-firstword-firstletter {
+  font-size: 3vw;
+  color: #02a437;
+}
+.page-cart .app-name-firstword-nextletters {
+  font-size: 1.5vw;
+  color: #02a437;
+}
+.page-cart .app-name-secondword-firstletter {
+  font-size: 3vw;
+  color: #a5490a;
+}
+.page-cart .app-name-secondword-nextletters {
+  font-size: 1.5vw;
+  color: #a5490a;
+}
+
+/* Style for the back option */
+.back-name {
+  grid-area: 1/3/2/4;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 3vw 25vw;
+  grid-template-rows: 5vw;
+  cursor: pointer;
+}
+
+/* Size of the back logo */
+.back-logo {
+  margin-top: 2vw;
+  margin-left: 0.4vw;
+  height: 2.5vw;
+  width: 2.5vw;
+}
+
+/* Size and style fo the back name */
+.back {
+  margin-top: 1vw;
+  font-style: italic;
+  font-weight: bolder;
+  grid-area: 1/2/2/3;
+}
+.back-firstletter {
+  font-size: 3vw;
+  color: #02a437;
+}
+.back-nextletters {
+  font-size: 1.5vw;
+  color: #a5490a;
+}
+
+/* Style for the bottom portion of the cart page */
+.cart-bottom {
+  display: grid;
+  grid-template-rows: 8vw max-content;
+  background-color: rgb(255, 238, 221);
+  height: max-content;
+  width: 85vw;
+  border: 25px solid white;
+  border-radius: 8vw;
+  box-shadow: 1px 1px 20px 5px gray;
+  margin-left: 4.5vw;
+  margin-top: 7.5vw;
+}
+
+/* Style and size for the cart name */
+.cart-tab {
+  text-align: center;
+  font-style: italic;
+  font-weight: bolder;
+}
+.cart-firstletter {
+  font-size: 5vw;
+  color: #02a437;
+}
+.cart-nextletters {
+  font-size: 2.5vw;
+  color: #a5490a;
+}
+
+/* Style and size for the cart products*/
+.cart-product {
+  display: grid;
+  grid-template-columns: 10vw 18vw 10vw 15vw 10vw 10vw 8vw;
+  background-color: #ffd6ad;
+  margin: 0vw 2.5vw 1vw 2.5vw;
+  border-radius: 2vw;
+  padding-bottom: 0.5vw;
+}
+
+/* Size for the product image */
+.image-cart-product {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.3vw;
+  height: 5vw;
+}
+
+/* Style and size of the product name, quantity, price*/
+.name-cart-product,
+.quantity-cart-product,
+.quantity-cart-price {
+  margin-top: 1.5vw;
+  text-align: center;
+  font-size: 2vw;
+}
+
+/* Style for the buy option */
+.buy-option {
+  grid-area: 1/6/2/7;
+  display: grid;
+  grid-template-columns: 5vw 5vw;
+  grid-auto-flow: column;
+  cursor: pointer;
+}
+
+/* Size of the buy logo */
+.buy {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1vw;
+  height: 3.5vw;
+}
+
+/* Style and size of the buy name */
+.buy-name {
+  font-weight: bolder;
+  margin-top: 1.5vw;
+}
+
+/* Size of the remove logo */
+.remove {
+  grid-area: 1/7/2/8;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.6vw;
+  height: 2.5vw;
+  cursor: pointer;
+}
+
+/* Style for the total options */
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style and size of the total price */
+.price-total {
+  text-align: center;
+  background-color: #a5490a;
+  color: white;
+  border-radius: 2vw;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  margin: 1vw 5vw 2vw 5.2vw;
+}
+
+/* Style for the buy all option */
+.buyall {
+  grid-area: 1/2/2/3;
+  display: grid;
+  grid-template-columns: 5vw 9vw;
+  grid-auto-flow: column;
+  background-color: #a5490a;
+  color: white;
+  border-radius: 2vw;
+  padding: 0.5vw 0vw 0.5vw 1vw;
+  margin: 1vw 5vw 2vw 0vw;
+  cursor: pointer;
+}
+
+/* Size of the buy all logo */
+.buyall-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 3.5vw;
+}
+
+/* Hovering effect for cart page */
+.cart-product:hover {
+  box-shadow: 1px 1px 10px 3px lightgray;
+}
+
+.buyall:hover {
+  box-shadow: 1px 1px 5px 0.5px #a5490a;
+}

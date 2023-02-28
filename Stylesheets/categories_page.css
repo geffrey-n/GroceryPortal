@@ -1,0 +1,163 @@
+/* Hiding the categories page */
+.page-categories {
+  display: none;
+}
+
+/* Style for the entire body of the web page */
+body {
+  margin: 0;
+}
+
+/* Style for the top portion of categories page */
+.categories-top {
+  position: fixed;
+  top: 0vw;
+  background-color: white;
+  height: 5.5vw;
+  width: 100vw;
+  border-radius: 0vw 0vw 5vw 5vw;
+  box-shadow: 1px 1px 10px 1px gray;
+  display: grid;
+  grid-template-columns: 30vw 57vw 10vw;
+}
+
+/* Style for the logo and name of the webpage */
+.page-categories .app-logo-name {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 6vw 25vw;
+  grid-template-rows: 5vw;
+  margin-left: 3vw;
+}
+
+/* Size of the webpage logo */
+.page-categories .app-logo {
+  margin-top: 0.5vw;
+  height: 4vw;
+  width: 4vw;
+}
+
+/* Size and style of the webpage name */
+.page-categories .app-name {
+  font-style: italic;
+  font-weight: bolder;
+  grid-area: 1/2/2/3;
+}
+.page-categories .app-name-firstword-firstletter {
+  font-size: 3vw;
+  color: #02a437;
+}
+.page-categories .app-name-firstword-nextletters {
+  font-size: 1.5vw;
+  color: #02a437;
+}
+.page-categories .app-name-secondword-firstletter {
+  font-size: 3vw;
+  color: #a5490a;
+}
+.page-categories .app-name-secondword-nextletters {
+  font-size: 1.5vw;
+  color: #a5490a;
+}
+
+/* Style for the search bar */
+.search-bar {
+  grid-area: 1/2/2/3;
+  display: grid;
+  grid-template-columns: 38.5vw 5vw;
+  grid-template-rows: 4.5vw;
+}
+
+/* Size and style of the search name */
+.search {
+  margin-top: 1.2vw;
+  width: 37.3vw;
+  font-size: 1.5vw;
+  border-style: none;
+  border-radius: 1vw;
+  background-color: rgb(255, 238, 221);
+  padding: 0.7vw;
+  padding-right: 4vw;
+  outline-style: none;
+}
+
+/* Size of the search logo */
+.search-logo {
+  margin-top: 1.8vw;
+  height: 2vw;
+  width: 2vw;
+  cursor: pointer;
+}
+
+/* Style for the bottom portion of the categories page */
+.categories-bottom {
+  display: grid;
+  grid-template-rows: 8vw max-content;
+  background-color: rgb(255, 238, 221);
+  height: max-content;
+  width: 85vw;
+  border: 25px solid white;
+  border-radius: 8vw;
+  box-shadow: 1px 1px 20px 5px gray;
+  margin-left: 4.5vw;
+  margin-top: 7.5vw;
+}
+
+/* Style and size for the categories name */
+.categories {
+  text-align: center;
+  font-style: italic;
+  font-weight: bolder;
+}
+.categories-firstletter {
+  font-size: 5vw;
+  color: #02a437;
+}
+.categories-nextletters {
+  font-size: 2.5vw;
+  color: #a5490a;
+}
+
+/* Style for the list of categories */
+.categories-list {
+  grid-area: 2/1/3/2;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Size and style of the categories */
+.categories-name {
+  background-color: #ffd6ad;
+  width: 17vw;
+  height: 13vw;
+  border-radius: 5vw;
+  margin: 0vw 1vw 3vw 1vw;
+  padding: 1vw;
+  cursor: pointer;
+}
+
+/* Size of the categories logo */
+.category-logo {
+  display: block;
+  margin-top: 0.2vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1vw;
+  width: max-content;
+  height: 70%;
+}
+
+/* Size and style of the categories name */
+.category-name {
+  position: relative;
+  top: -1vw;
+  font-size: 1.8vw;
+  text-align: center;
+}
+
+/* Hovering effect for the categories page */
+.categories-name:hover {
+  box-shadow: 1px 1px 10px 3px lightgray;
+}

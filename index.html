@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Head of the webpage -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Importing the Poppins font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+    <!-- Importing the css file for login page -->
+    <link rel="stylesheet" href="./Stylesheets/login_page.css" />
+    <title>Fresh Basket</title>
+  </head>
+
+  <!-- Body of the webpage -->
+  <body>
+    <!-- Section for login page -->
+    <section class="page-login">
+      <!-- Beginning of login page -->
+      <div class="login_page">
+        <!-- Left portion of login page -->
+        <div class="login">
+          <!-- Logo and name of the webpage -->
+          <div class="app-logo-name">
+            <!-- Logo of webpage -->
+            <div><img class="app-logo" src="./Assets/Images/Logo.png" /></div>
+            <!-- Name of webpage -->
+            <div class="app-name">
+              <span class="app-name-firstword-firstletter">F</span
+              ><span class="app-name-firstword-nextletters">RESH</span>
+              <span class="app-name-secondword-firstletter">B</span
+              ><span class="app-name-secondword-nextletters">ASKET</span>
+            </div>
+            <!-- User login tab -->
+            <div class="login-tab">
+              <!-- User input for mail id and password -->
+              <div class="login-name">LOGIN</div>
+              <div>
+                <input class="user-mail" type="text" placeholder="User Mail" />
+              </div>
+              <div>
+                <input
+                  class="user-password"
+                  type="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div>
+                <input class="login-button" type="button" value="Login" />
+              </div>
+              <!-- New user sign up option -->
+              <div>
+                <span class="new-user">New User ?</span>
+                <span class="sign-up">Sign up</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right portion of webpage - Animation -->
+        <img class="page_animation" src="./Assets/Images/animation.gif" />
+        <!-- End of login page -->
+      </div>
+      <!-- End of section for login page -->
+    </section>
+    <!-- Section for sign up page -->
+    <section class="page-signup">
+      <!-- Beginning of sign up page -->
+      <div class="signup_page">
+        <!-- Left portion of sign up page -->
+        <div class="signup">
+          <!-- Logo and name of the webpage -->
+          <div class="app-logo-name">
+            <!-- Logo of webpage -->
+            <div><img class="app-logo" src="./Assets/Images/Logo.png" /></div>
+            <!-- Name of webpage -->
+            <div class="app-name">
+              <span class="app-name-firstword-firstletter">F</span
+              ><span class="app-name-firstword-nextletters">RESH</span>
+              <span class="app-name-secondword-firstletter">B</span
+              ><span class="app-name-secondword-nextletters">ASKET</span>
+            </div>
+            <!-- User sign up tab -->
+            <div class="signup-tab">
+              <!-- User input for first name, last name, mail id and password -->
+              <div class="signup-name">SIGN UP</div>
+              <div>
+                <input
+                  class="user-name-first"
+                  type="text"
+                  placeholder="First Name"
+                />
+                <input
+                  class="user-name-last"
+                  type="text"
+                  placeholder="Last Name"
+                />
+              </div>
+              <div>
+                <input class="user-mail" type="text" placeholder="User Mail" />
+              </div>
+              <div>
+                <input
+                  class="user-password"
+                  type="password"
+                  placeholder="Password"
+                />
+              </div>
+              <div>
+                <input
+                  class="signup-button"
+                  type="button"
+                  value="Create Account"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right portion of webpage - Animation -->
+        <img class="page_animation" src="./Assets/Images/animation.gif" />
+        <!-- End of user sign up tab -->
+      </div>
+      <!-- End of section for sign up page -->
+    </section>
+    <!-- Section for categories page -->
+    <section class="page-categories">
+      <!-- Beginning of categories page -->
+      <!-- Top portion of categories page -->
+      <div class="categories-top">
+        <!-- Logo and name of the webpage -->
+        <div class="app-logo-name">
+          <!-- Logo of the web page -->
+          <div><img class="app-logo" src="./Assets/Images/Logo.png" /></div>
+          <!-- Name of the web page -->
+          <div class="app-name">
+            <span class="app-name-firstword-firstletter">F</span
+            ><span class="app-name-firstword-nextletters">RESH</span>
+            <span class="app-name-secondword-firstletter">B</span
+            ><span class="app-name-secondword-nextletters">ASKET</span>
+          </div>
+        </div>
+        <!-- Search bar in the top portion -->
+        <div class="search-bar">
+          <input
+            class="search"
+            type="text"
+            placeholder="Search..."
+            onfocus="this.value=''"
+            onchange="this.blur();"
+          />
+          <img class="search-logo" src="./Assets/Images/search.png" />
+        </div>
+        <!-- End of top portion of categories page -->
+      </div>
+      <!-- Bottom portion of categories page -->
+      <div class="categories-bottom">
+        <!-- Name of the category -->
+        <div class="categories">
+          <span class="categories-firstletter">C</span
+          ><span class="categories-nextletters">ATEGORIES</span>
+        </div>
+        <!-- List of categories -->
+        <div class="categories-list"></div>
+        <!-- End of bottom portion of categories page -->
+      </div>
+      <!-- End of section for categories page -->
+    </section>
+    <!-- Section for products page -->
+    <section class="page-category">
+      <!-- Beginning of products page -->
+      <!-- Top portion of the product page -->
+      <div class="category-top">
+        <!-- Logo and name of the category -->
+        <div class="app-logo-name">
+          <!-- Logo of webpage -->
+          <div><img class="app-logo" src="./Assets/Images/Logo.png" /></div>
+          <!-- Name of webpage -->
+          <div class="app-name">
+            <span class="app-name-firstword-firstletter">F</span
+            ><span class="app-name-firstword-nextletters">RESH</span>
+            <span class="app-name-secondword-firstletter">B</span
+            ><span class="app-name-secondword-nextletters">ASKET</span>
+          </div>
+        </div>
+        <!-- Cart tab option in the top portion -->
+        <div class="cart-name">
+          <!-- Logo and name of cart option -->
+          <div><img class="cart-logo" src="./Assets/Images/cart.png" /></div>
+          <div class="cart">
+            <span class="cart-name-firstword-firstletter">C</span
+            ><span class="cart-name-firstword-nextletters">ART</span>
+          </div>
+        </div>
+        <!-- End of top portion of the product page -->
+      </div>
+      <!-- Bottom portion of the products page-->
+      <div class="category-bottom">
+        <!-- Left portion for list of categories -->
+        <div class="list-category">
+          <!-- Name of the categories -->
+          <div class="categories">
+            <span class="categories-firstletter">C</span
+            ><span class="categories-nextletters">ATEGORIES</span>
+          </div>
+          <div class="category-list"></div>
+          <!-- End of left portion for list of categories -->
+        </div>
+        <!-- Right portion for list of products -->
+        <div class="category">
+          <!-- Name of the category -->
+          <div class="userCategory-name"></div>
+          <!-- List of products in the category -->
+          <div class="category-products">
+            <!-- End of list of products -->
+          </div>
+          <!-- End of right portion for list of products -->
+        </div>
+        <!-- End of bottom portion of the products page -->
+      </div>
+      <!-- End of section for products page -->
+    </section>
+    <!-- Section for cart page -->
+    <section class="page-cart">
+      <!-- Beginning of cart page -->
+      <!-- Top portion of the cart page -->
+      <div class="cart-top">
+        <!-- Logo and name of the webpage -->
+        <div class="app-logo-name">
+          <!-- Logo of webpage -->
+          <div><img class="app-logo" src="./Assets/Images/Logo.png" /></div>
+          <!-- Name of webpage -->
+          <div class="app-name">
+            <span class="app-name-firstword-firstletter">F</span
+            ><span class="app-name-firstword-nextletters">RESH</span>
+            <span class="app-name-secondword-firstletter">B</span
+            ><span class="app-name-secondword-nextletters">ASKET</span>
+          </div>
+        </div>
+        <!-- Logo and name of the back option -->
+        <div class="back-name">
+          <!-- Logo of the back option -->
+          <div><img class="back-logo" src="./Assets/Images/back.png" /></div>
+          <!-- Name of the back option -->
+          <div class="back">
+            <span class="back-firstletter">B</span
+            ><span class="back-nextletters">ACK</span>
+          </div>
+        </div>
+        <!-- End of top portion of the cart page -->
+      </div>
+      <!-- Bottom portion of the cart page -->
+      <div class="cart-bottom">
+        <!-- Name of the cart tab -->
+        <div class="cart-tab">
+          <span class="cart-firstletter">C</span
+          ><span class="cart-nextletters">ART</span>
+        </div>
+        <div class="products-cart"></div>
+        <div class="total">
+          <!-- Total price of the products -->
+          <span class="price-total">Total</span>
+          <!-- Buy all option -->
+          <div class="buyall">
+            <img class="buyall-image" src="./Assets/Images/buy_before.png" />
+            <span class="name-buy-all">Buy All</span>
+          </div>
+        </div>
+        <!-- End of bottom portion of the cart page -->
+      </div>
+      <!-- End of section for cart page -->
+    </section>
+    <!-- End of body of the webpage -->
+    <!-- Section for invoice page -->
+    <section class="page-invoice">
+      <!-- Top portion of invoice page -->
+      <div class="invoice-top">
+        <!-- Logo and name of the category -->
+        <div class="app-logo-name">
+          <!-- Logo of webpage -->
+          <div><img class="app-logo" src="./Assets/Images/Logo.png" /></div>
+          <!-- Name of webpage -->
+          <div class="app-name">
+            <span class="app-name-firstword-firstletter">F</span
+            ><span class="app-name-firstword-nextletters">RESH</span>
+            <span class="app-name-secondword-firstletter">B</span
+            ><span class="app-name-secondword-nextletters">ASKET</span>
+          </div>
+        </div>
+        <!-- End of top portion of the product page -->
+      </div>
+      <!-- Bottom portion of invoice page -->
+      <div class="invoice-bottom"></div>
+      <!-- End of bottom portion of invoice page -->
+    </section>
+    <!-- End of section for invoice page -->
+  </body>
+  <!-- End of the body -->
+  <!-- Including the script files -->
+  <script type="module" src="./Scripts/signup.js"></script>
+  <script type="module" src="./Scripts/login.js"></script>
+  <script type="module" src="./Scripts/categories.js"></script>
+  <script type="module" src="./Scripts/products.js"></script>
+  <script type="module" src="./Scripts/cart.js"></script>
+  <!-- End of webpage -->
+</html>

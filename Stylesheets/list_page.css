@@ -1,0 +1,287 @@
+/* Hiding the list page */
+.page-category {
+  display: none;
+}
+
+/* Style for the entire body of the web page */
+body {
+  margin: 0;
+}
+
+/* Style for the top portion of product page */
+.category-top {
+  position: fixed;
+  top: 0vw;
+  background-color: white;
+  height: 5.5vw;
+  width: 100vw;
+  border-radius: 0vw 0vw 5vw 5vw;
+  box-shadow: 1px 1px 10px 1px gray;
+  display: grid;
+  grid-template-columns: 30vw 57vw 10vw;
+}
+
+/* Style for the logo and name of the webpage */
+.page-category .app-logo-name {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 6vw 25vw;
+  grid-template-rows: 5vw;
+  margin-left: 3vw;
+}
+
+/* Size of the webpage logo */
+.page-category .app-logo {
+  margin-top: 0.5vw;
+  height: 4vw;
+  width: 4vw;
+}
+
+/* Size and style of the webpage name */
+.page-category .app-name {
+  font-style: italic;
+  font-weight: bolder;
+  grid-area: 1/2/2/3;
+}
+.page-category .app-name-firstword-firstletter {
+  font-size: 3vw;
+  color: #02a437;
+}
+.page-category .app-name-firstword-nextletters {
+  font-size: 1.5vw;
+  color: #02a437;
+}
+.page-category .app-name-secondword-firstletter {
+  font-size: 3vw;
+  color: #a5490a;
+}
+.page-category .app-name-secondword-nextletters {
+  font-size: 1.5vw;
+  color: #a5490a;
+}
+
+/* Style for the cart option */
+.cart-name {
+  grid-area: 1/3/2/4;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 3vw 25vw;
+  grid-template-rows: 5vw;
+  cursor: pointer;
+}
+
+/* Size of the cart logo */
+.cart-logo {
+  margin-top: 1.5vw;
+  height: 3vw;
+  width: 3vw;
+}
+
+/* Size and style fo the cart name */
+.cart {
+  margin-top: 1vw;
+  font-style: italic;
+  font-weight: bolder;
+  grid-area: 1/2/2/3;
+}
+.cart-name-firstword-firstletter {
+  font-size: 3vw;
+  color: #02a437;
+}
+.cart-name-firstword-nextletters {
+  font-size: 1.5vw;
+  color: #a5490a;
+}
+
+/* Style for the bottom portion of the product page */
+.category-bottom {
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: 25vw 60vw;
+  background-color: rgb(255, 238, 221);
+  height: max-content;
+  width: 85vw;
+  border: 25px solid white;
+  border-radius: 8vw;
+  box-shadow: 1px 1px 20px 5px gray;
+  margin-left: 4.5vw;
+  margin-top: 7.5vw;
+}
+
+/* Style for the left portion for list of categories */
+.list-category {
+  background-color: #ffd6ad;
+  border-radius: 5vw;
+}
+
+/* Style and size for the categories name */
+.page-category .categories {
+  margin-top: 0.8vw;
+  text-align: center;
+  font-style: italic;
+  font-weight: bolder;
+}
+.page-category .categories-firstletter {
+  font-size: 4vw;
+  color: #02a437;
+}
+.page-category .categories-nextletters {
+  font-size: 2vw;
+  color: #a5490a;
+}
+
+/* Style for the list of categories */
+.category-list {
+  margin: 1vw 3vw 3vw 3vw;
+}
+
+/* Style and size for the categories*/
+.category-item {
+  text-align: center;
+  background-color: #a5490a;
+  color: white;
+  margin-bottom: 1vw;
+  border-radius: 2vw;
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+
+/* Size and style of the category name */
+.category {
+  grid-area: 1/2/2/3;
+  text-align: center;
+  font-style: italic;
+  font-weight: bolder;
+}
+.category-firstletter {
+  font-size: 5vw;
+  color: #02a437;
+}
+.category-nextletters {
+  font-size: 2.5vw;
+  color: #a5490a;
+}
+
+/* Size and style of the products */
+.category-products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 75%;
+  width: 95%;
+  margin-left: 1.8vw;
+}
+
+/* Size for each product */
+.product {
+  background-color: #ffd6ad;
+  height: 13.5vw;
+  width: 10vw;
+  margin-right: 1vw;
+  margin-bottom: 1vw;
+  border-radius: 1vw;
+}
+
+/* Size for the product image */
+.image-product {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.3vw;
+  height: 5vw;
+}
+
+/* Style and size of the product name, quantity */
+.name-product,
+.quantity-product {
+  font-size: 1vw;
+  text-align: center;
+  font-style: normal;
+}
+
+/* Style for user quantity */
+.quantity-user {
+  border-radius: 1vw;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  width: 6.5vw;
+  height: 2.3vw;
+  margin-top: 0.7vw;
+  margin-left: 1.8vw;
+}
+
+/* Size of the plus icon */
+.plus {
+  margin-top: 0.65vw;
+  height: 0.9vw;
+  cursor: pointer;
+}
+
+/* Size of the minus icon */
+.minus {
+  margin-top: 0.65vw;
+  height: 0.9vw;
+  cursor: pointer;
+}
+
+/* Style and size of the user quantity */
+.user-purchase {
+  text-align: center;
+  font-style: normal;
+  font-size: 1vw;
+  width: 1.65vw;
+  border-style: none;
+  outline: none;
+  color: #a5490a;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  margin-top: 0.3vw;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+.out-of-stock {
+  margin-top: 0.3vw;
+  font-size: 1vw;
+  color: red;
+  cursor: default;
+}
+
+/* Hovering effect */
+/* Hovering effect for each product */
+.product:hover {
+  box-shadow: 1px 1px 10px 3px lightgray;
+}
+
+/* Hovering effect for add to cart option */
+.add-to-cart:hover {
+  background-color: #a5490a;
+  color: white;
+  border-radius: 5vw;
+}
+
+/* Hovering effect for out of stock option */
+.out-of-stock:hover {
+  background-color: #ffd6ad;
+  margin-top: 0.3vw;
+  font-size: 1vw;
+  color: red;
+}
+
+/* Hovering effect for each category item */
+.category-item:hover {
+  box-shadow: 1px 1px 5px 0.5px #a5490a;
+}
+
+/* Style for hiding the increment and decrement buttons in the input field */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
