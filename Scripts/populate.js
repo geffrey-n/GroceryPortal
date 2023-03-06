@@ -7,7 +7,9 @@ let listPage = document.getElementsByClassName("page-category")[0];
 let categoryPage = document.getElementsByClassName("page-categories")[0];
 let cartPage = document.getElementsByClassName("page-cart")[0];
 let invoicePage = document.getElementsByClassName("page-invoice")[0];
-let cart = document.getElementsByClassName("cart-name")[0];
+let cartCategory = document.getElementsByClassName("cart-name")[0];
+let cart = document.getElementsByClassName("cart-name")[1];
+
 let userProductsData = [];
 
 /** Function for creating the category container */
@@ -128,14 +130,16 @@ let productsCategory = async function (category) {
     // Condition for creating the products container if the stock is not available
     else {
       let categoryProduct = `<div class="product">
-    <img class="image-product" src="${allproducts[products[i]].productImage}" />
-            <div class="name-product">${
+    <img class="image-product" style="opacity:0.4" src="${
+      allproducts[products[i]].productImage
+    }" />
+            <div class="name-product" style="opacity:0.4" >${
               allproducts[products[i]].productName
             }</div>
-            <div class="quantity-product">${
+            <div class="quantity-product" style="opacity:0.4" >${
               allproducts[products[i]].productPrice
             }</div>
-            <div class="quantity-user">
+            <div class="quantity-user" style="opacity:0.4" >
               <img class="minus" src="./Assets/Images/minus.png" />
               <input
                 class="user-purchase"
@@ -207,7 +211,12 @@ async function userProductDetails(category) {
       });
       // Event Listener for lsitening the event for clicking the add to cart event
       addToCart.addEventListener("click", function () {
-        console.log("add1");
+        const popup =
+          document.getElementsByClassName("added-cart")[0].classList;
+        popup.add("added-cart-update");
+        setTimeout(function () {
+          popup.remove("added-cart-update");
+        }, 550);
         let userSelectedProducts = {
           [productName.innerHTML]: {
             category: category,
@@ -287,7 +296,6 @@ async function userProductDetails(category) {
                   backCategory.addEventListener("click", function () {
                     invoicePage.style.display = "none";
                     categoryPage.style.display = "block";
-                    cartProduct(userProductsData);
                     cart.addEventListener("click", function () {
                       cartProduct(userProductsData);
                     });
@@ -381,25 +389,26 @@ async function userProductDetails(category) {
                     });
                   });
                 }
-                // Event Listener for listening the event of purchasing all products
-                let buyAll = document.getElementsByClassName("buyall")[0];
-                buyAll.addEventListener("click", function () {
-                  cartPage.style.display = "none";
-                  invoicePage.style.display = "block";
-                  // Function for creating the invoice page
-                  buyAllPage();
-                  let backCategory =
-                    document.getElementsByClassName("category-back")[0];
-                  userProductsData = [];
-                  backCategory.addEventListener("click", function () {
-                    invoicePage.style.display = "none";
-                    categoryPage.style.display = "block";
-                    cartProduct(userProductsData);
-                    cart.addEventListener("click", function () {
-                      cartProduct(userProductsData);
+                if (userProductsData != "") {
+                  // Event Listener for listening the event of purchasing all products
+                  let buyAll = document.getElementsByClassName("buyall")[0];
+                  buyAll.addEventListener("click", function () {
+                    cartPage.style.display = "none";
+                    invoicePage.style.display = "block";
+                    // Function for creating the invoice page
+                    buyAllPage();
+                    let backCategory =
+                      document.getElementsByClassName("category-back")[0];
+                    userProductsData = [];
+                    backCategory.addEventListener("click", function () {
+                      invoicePage.style.display = "none";
+                      categoryPage.style.display = "block";
+                      cart.addEventListener("click", function () {
+                        cartProduct(userProductsData);
+                      });
                     });
                   });
-                });
+                }
               });
               // Event Listener for listening the event of back to category
               backCategory.addEventListener("click", function () {
@@ -407,9 +416,6 @@ async function userProductDetails(category) {
                 categoryPage.style.display = "block";
                 cart.addEventListener("click", function () {
                   cartProduct(userProductsData);
-                  cart.addEventListener("click", function () {
-                    cartProduct(userProductsData);
-                  });
                 });
               });
             });
@@ -448,7 +454,6 @@ async function userProductDetails(category) {
             backCategory.addEventListener("click", function () {
               invoicePage.style.display = "none";
               categoryPage.style.display = "block";
-              cartProduct(userProductsData);
               cart.addEventListener("click", function () {
                 cartProduct(userProductsData);
               });
@@ -465,18 +470,19 @@ async function userProductDetails(category) {
  * @param {Array} userData provides the array of user selected products
  */
 let cartProduct = function (userData) {
-  let totalUserPrice = [];
-  // Creating the cart container for the user selected products
-  document.getElementsByClassName("products-cart")[0].replaceChildren();
-  for (let i = 0; i < userData.length; i++) {
-    let keys = Object.keys(userData[i]);
-    for (let j = 0; j < keys.length; j++) {
-      let productPrice = userData[i][keys[j]].price;
-      productPrice = productPrice.split("Rs ");
-      let userProductPrice =
-        productPrice[1] * userData[i][keys[j]].userQuantity;
-      totalUserPrice.push(userProductPrice);
-      let cartContainer = `<div class="cart-product">
+  if (userData != "") {
+    let totalUserPrice = [];
+    // Creating the cart container for the user selected products
+    document.getElementsByClassName("products-cart")[0].replaceChildren();
+    for (let i = 0; i < userData.length; i++) {
+      let keys = Object.keys(userData[i]);
+      for (let j = 0; j < keys.length; j++) {
+        let productPrice = userData[i][keys[j]].price;
+        productPrice = productPrice.split("Rs ");
+        let userProductPrice =
+          productPrice[1] * userData[i][keys[j]].userQuantity;
+        totalUserPrice.push(userProductPrice);
+        let cartContainer = `<div class="cart-product">
       <img class="image-cart-product" src="${userData[i][keys[j]].image}" />
           <div class="name-cart-product">${keys[j]}</div>
           <div class="quantity-cart-product">${
@@ -490,95 +496,129 @@ let cartProduct = function (userData) {
           <img class="remove" src="./Assets/Images/remove.png" />
           </div>
           `;
-      document.getElementsByClassName("products-cart")[0].innerHTML +=
-        cartContainer;
+        document.getElementsByClassName("products-cart")[0].innerHTML +=
+          cartContainer;
+      }
     }
-  }
 
-  // Creating the cart total price abd buy all option
-  let totalAmount = 0;
-  for (let i = 0; i < totalUserPrice.length; i += 1) {
-    totalAmount += totalUserPrice[i];
-  }
-  document.getElementsByClassName("total")[0].replaceChildren();
-  let total = `<span class="price-total">Total : Rs ${totalAmount}</span>
+    // Creating the cart total price abd buy all option
+    let totalAmount = 0;
+    for (let i = 0; i < totalUserPrice.length; i += 1) {
+      totalAmount += totalUserPrice[i];
+    }
+    document.getElementsByClassName("total")[0].replaceChildren();
+    let total = `<span class="price-total">Total : Rs ${totalAmount}</span>
           <div class="buyall">
             <img class="buyall-image" src="./Assets/Images/buy_before.png" />
             <span class="name-buy-all">Buy All</span>
           </div>`;
-  document.getElementsByClassName("total")[0].innerHTML += total;
+    document.getElementsByClassName("total")[0].innerHTML += total;
 
-  // Event Listener for listening the removal of products in the cart
-  for (let i = 0; i < userData.length; i++) {
-    let removeButton = document.getElementsByClassName("remove")[i];
-    removeButton.addEventListener("click", function () {
-      userData = userData.filter((item) => item !== userData[i]);
-      {
-        cartProduct(userData);
-        userProductsData = userData;
-        cart.addEventListener("click", function () {
+    // Event Listener for listening the removal of products in the cart
+    for (let i = 0; i < userData.length; i++) {
+      let removeButton = document.getElementsByClassName("remove")[i];
+      removeButton.addEventListener("click", function () {
+        const popup =
+          document.getElementsByClassName("removed-cart")[0].classList;
+        popup.add("removed-cart-update");
+        setTimeout(function () {
+          popup.remove("removed-cart-update");
+        }, 700);
+        userData = userData.filter((item) => item !== userData[i]);
+        {
           cartProduct(userData);
+          userProductsData = userData;
+          cart.addEventListener("click", function () {
+            cartProduct(userData);
+          });
+        }
+      });
+    }
+    // Event Listener for listening the event of purchasing the products in the cart
+    for (let j = 0; j < userData.length; j++) {
+      let buy = document.getElementsByClassName("buy-option")[j];
+      buy.addEventListener("click", function () {
+        let product = Object.keys(userData[j]);
+        let userProductQuantity = userData[j][product].userQuantity;
+        let productCategory = userData[j][product].category;
+        let productName = userData[j][product].product;
+        let stockQuantity =
+          data[productCategory].categoryProducts[productName].productQuantity;
+        let updateQuantity = stockQuantity - userProductQuantity;
+        let updateData = {
+          category: [productCategory],
+          product: [productName],
+          quantity: [updateQuantity],
+        };
+        fetchQuantity(updateData);
+        cartPage.style.display = "none";
+        invoicePage.style.display = "block";
+        buyPage();
+        let backCart = document.getElementsByClassName("cart-back")[0];
+        let backCategory = document.getElementsByClassName("category-back")[0];
+        userData = userData.filter((item) => item !== userData[j]);
+        {
+          cartProduct(userData);
+          cart.addEventListener("click", function () {
+            cartProduct(userData);
+          });
+        }
+        backCart.addEventListener("click", function () {
+          invoicePage.style.display = "none";
+          cartPage.style.display = "block";
         });
-      }
-    });
-  }
-  // Event Listener for listening the event of purchasing the products in the cart
-  for (let j = 0; j < userData.length; j++) {
-    let buy = document.getElementsByClassName("buy-option")[j];
-    buy.addEventListener("click", function () {
-      let product = Object.keys(userData[j]);
-      let userProductQuantity = userData[j][product].userQuantity;
-      let productCategory = userData[j][product].category;
-      let productName = userData[j][product].product;
-      let stockQuantity =
-        data[productCategory].categoryProducts[productName].productQuantity;
-      let updateQuantity = stockQuantity - userProductQuantity;
-      let updateData = {
-        category: [productCategory],
-        product: [productName],
-        quantity: [updateQuantity],
-      };
-      fetchQuantity(updateData);
+        backCategory.addEventListener("click", function () {
+          invoicePage.style.display = "none";
+          categoryPage.style.display = "block";
+        });
+      });
+    }
+    // Event Listener for listening the event of purchasing all products
+    let buyAll = document.getElementsByClassName("buyall")[0];
+    buyAll.addEventListener("click", function () {
       cartPage.style.display = "none";
       invoicePage.style.display = "block";
-      buyPage();
-      let backCart = document.getElementsByClassName("cart-back")[0];
+      buyAllPage();
       let backCategory = document.getElementsByClassName("category-back")[0];
-      userData = userData.filter((item) => item !== userData[j]);
-      {
-        cartProduct(userData);
-        cart.addEventListener("click", function () {
-          cartProduct(userData);
-        });
-      }
-      backCart.addEventListener("click", function () {
-        invoicePage.style.display = "none";
-        cartPage.style.display = "block";
-      });
+      userData = [];
       backCategory.addEventListener("click", function () {
         invoicePage.style.display = "none";
         categoryPage.style.display = "block";
+        cart.addEventListener("click", function () {
+          cartProduct(userData);
+        });
+        userProductsData = [];
       });
+    });
+    // Event Listener for triggering the cart page
+    cartCategory.addEventListener("click", function () {
+      categoryPage.style.display = "none";
+      cartPage.style.display = "block";
+      cartProduct(userData);
     });
   }
-  // Event Listener for listening the event of purchasing all products
-  let buyAll = document.getElementsByClassName("buyall")[0];
-  buyAll.addEventListener("click", function () {
-    cartPage.style.display = "none";
-    invoicePage.style.display = "block";
-    buyAllPage();
-    let backCategory = document.getElementsByClassName("category-back")[0];
-    userData = [];
-    backCategory.addEventListener("click", function () {
-      invoicePage.style.display = "none";
+  // Creating the container for empty cart
+  else {
+    document.getElementsByClassName("products-cart")[0].replaceChildren();
+    let cartContainer = `<div class="cart-product" style="display:block">
+      <img class="image-cart-product" src="../Assets/Images/nocart.png" />
+          <div class="name-cart-product">Cart is Empty</div>
+          <div class="quantity-cart-product">Add products to the cart</div>
+          </div>
+          `;
+    document.getElementsByClassName("products-cart")[0].innerHTML +=
+      cartContainer;
+    document.getElementsByClassName("total")[0].replaceChildren();
+    let total = `<div class="buyall continue-shopping">
+            <span class="name-buy-all">Continue Shopping</span>
+          </div>`;
+    document.getElementsByClassName("total")[0].innerHTML += total;
+    let continueShopping = document.getElementsByClassName("buyall")[0];
+    continueShopping.addEventListener("click", function () {
       categoryPage.style.display = "block";
-      cartProduct(userData);
-      cart.addEventListener("click", function () {
-        cartProduct(userData);
-      });
-      userProductsData = [];
+      cartPage.style.display = "none";
     });
-  });
+  }
 };
 
 // Function for creating the invoice page if individual product is purchased
@@ -629,3 +669,4 @@ async function currentQuantity() {
   let jsonUpdate = await jsonValue.json();
   return jsonUpdate;
 }
+

@@ -1,14 +1,1 @@
-{
-  "mckenzie@gmail.com": {
-    "firstName": ["Mckenzie"],
-    "lastName": ["Geffrey"],
-    "mailId": ["mckenzie@gmail.com"],
-    "password": ["333"]
-  },
-  "kavin123": {
-    "firstName": ["Kavin"],
-    "lastName": ["P"],
-    "mailId": ["kavin123"],
-    "password": ["kavin123"]
-  }
-}
+{"mckenzie@gmail.com":{"firstName":["Mckenzie"],"lastName":["Geffrey"],"mailId":["mckenzie@gmail.com"],"password":["333"]},"kavin123":{"firstName":["Kavin"],"lastName":["P"],"mailId":["kavin123"],"password":["kavin123"]},"sadh@gmail.com":{"firstName":["Sadhana"],"lastName":["S"],"mailId":["sadh@gmail.com"],"password":["sadh"]}}

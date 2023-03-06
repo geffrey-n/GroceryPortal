@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins"
     />
+    <link rel="icon" type="image/x-icon" href="/Assets/Images/Logo.png" />
     <!-- Importing the css file for login page -->
     <link rel="stylesheet" href="./Stylesheets/login_page.css" />
     <title>Fresh Basket</title>
@@ -145,12 +146,22 @@
         <div class="search-bar">
           <input
             class="search"
-            type="text"
+            list="data-items"
             placeholder="Search..."
             onfocus="this.value=''"
             onchange="this.blur();"
           />
+          <datalist id="data-items"></datalist>
           <img class="search-logo" src="./Assets/Images/search.png" />
+        </div>
+        <!-- Cart tab option in the top portion -->
+        <div class="cart-name">
+          <!-- Logo and name of cart option -->
+          <div><img class="cart-logo" src="./Assets/Images/cart.png" /></div>
+          <div class="cart">
+            <span class="cart-name-firstword-firstletter">C</span
+            ><span class="cart-name-firstword-nextletters">ART</span>
+          </div>
         </div>
         <!-- End of top portion of categories page -->
       </div>
@@ -184,6 +195,8 @@
             ><span class="app-name-secondword-nextletters">ASKET</span>
           </div>
         </div>
+        <!-- Pop up for add to cart -->
+        <div class="added-cart">Added to cart</div>
         <!-- Cart tab option in the top portion -->
         <div class="cart-name">
           <!-- Logo and name of cart option -->
@@ -238,6 +251,8 @@
             ><span class="app-name-secondword-nextletters">ASKET</span>
           </div>
         </div>
+        <!-- Pop Up message for product removal -->
+        <div class="removed-cart">Product removed from the cart</div>
         <!-- Logo and name of the back option -->
         <div class="back-name">
           <!-- Logo of the back option -->
@@ -246,6 +261,18 @@
           <div class="back">
             <span class="back-firstletter">B</span
             ><span class="back-nextletters">ACK</span>
+          </div>
+        </div>
+        <!-- Logo and name of the logout option -->
+        <div class="logout-name">
+          <!-- Logo of the logout option -->
+          <div>
+            <img class="logout-logo" src="./Assets/Images/logout.png" />
+          </div>
+          <!-- Name of the logout option -->
+          <div class="logout">
+            <span class="logout-firstletter">L</span
+            ><span class="logout-nextletters">ogout</span>
           </div>
         </div>
         <!-- End of top portion of the cart page -->
@@ -286,6 +313,18 @@
             ><span class="app-name-firstword-nextletters">RESH</span>
             <span class="app-name-secondword-firstletter">B</span
             ><span class="app-name-secondword-nextletters">ASKET</span>
+          </div>
+        </div>
+        <!-- Logo and name of the logout option -->
+        <div class="logout-name">
+          <!-- Logo of the logout option -->
+          <div>
+            <img class="logout-logo" src="./Assets/Images/logout.png" />
+          </div>
+          <!-- Name of the logout option -->
+          <div class="logout">
+            <span class="logout-firstletter">L</span
+            ><span class="logout-nextletters">ogout</span>
           </div>
         </div>
         <!-- End of top portion of the product page -->

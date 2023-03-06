@@ -28,6 +28,7 @@ body {
   grid-template-columns: 6vw 25vw;
   grid-template-rows: 5vw;
   margin-left: 3vw;
+    cursor: pointer;
 }
 
 /* Size of the webpage logo */
